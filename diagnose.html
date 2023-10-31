@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registo de Receita/Despesa</title>
+    <link rel="stylesheet" type="text/css" href="/assets/css/diagnose.css">
+</head>
+<body>
+    <h1>Registo de Receita/Despesa</h1>
+
+    <div class="container">
+        <form id="finance-form">
+            <label for="type">Tipo:</label>
+            <select id="type" name="type">
+                <option value="receita">Receita</option>
+                <option value="despesa">Despesa</option>
+            </select><br>
+
+            <label for="amount">Valor:</label>
+            <input type="number" id="amount" name="amount" step="0.01"><br>
+
+            <label for="period">Período:</label>
+            <input type="text" id="period" name="period"><br>
+
+            <button type="button" id="submit-button">Adicionar</button>
+        </form>
+
+        <h2>Lista de Receitas/Despesas</h2>
+        <ul id="finance-list">
+            <!-- Os itens serão adicionados aqui dinamicamente -->
+        </ul>
+    </div>
+
+    <script src="/assets/js/diagnose.js"></script>
+
+    <div>
+        <h1>Envio de Arquivo</h1>
+    <form id="upload-form">
+        <input type="file" id="file-input" accept=".csv, .xls, .xlsx">
+        <button type="submit" id="upload-button">Enviar Arquivo</button>
+    </form>
+
+    <p id="response-message"></p>
+
+    <script src="script.js"></script>
+    </div>
+</body>
+</html>
